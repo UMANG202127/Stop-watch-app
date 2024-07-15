@@ -44,6 +44,13 @@ window.onload = function(){
             addMiliSeconds.innerHTML = miliSeconds;
         }
 
+        if(miliSeconds > 99){
+            seconds++;
+            addSeconds.innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            miliSeconds = 0;
+            addMiliSeconds.innerHTML = "00";
+        }
+
     }
 
 }
